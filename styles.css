@@ -62,12 +62,12 @@ section {
     }
 
     &::before {
-        content: '';
-        position: absolute;
-        height: 200px;
-        width: 100%;
-        top: 50%;
-        border-top: 1px solid #ffffff;
+      content: "";
+      position: absolute;
+      height: 200px;
+      width: 100%;
+      top: 50%;
+      border-top: 1px solid #ffffff;
     }
   }
 
@@ -89,7 +89,7 @@ section {
     & h2 {
       font-size: 7em;
       line-height: 1em;
-      font-family: 'League Gothic', sans-serif;
+      font-family: "League Gothic", sans-serif;
     }
     & .descreption {
       color: #d9d9d9;
@@ -107,7 +107,7 @@ section {
       color: #000000;
       cursor: pointer;
       font-weight: bold;
-      font-family: 'League Gothic', sans-serif;
+      font-family: "League Gothic", sans-serif;
     }
   }
 
@@ -125,12 +125,12 @@ section {
     }
 
     & button {
-        top: 60%;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: none;
+      top: 60%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
       & img {
         margin-top: 4px;
         width: 30px;
@@ -138,7 +138,6 @@ section {
       }
       &:hover {
         background-color: #beff1b;
-
       }
     }
   }
@@ -157,7 +156,7 @@ section {
 
     & .number {
       font-size: 5em;
-      font-family: 'League Gothic', sans-serif;
+      font-family: "League Gothic", sans-serif;
     }
     & ul {
       display: flex;
@@ -172,7 +171,64 @@ section {
       }
 
       .active {
-        background-color: #791fd3;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+section {
+  & .list {
+    & .item {
+      transform: translateX(100vw);
+      transition: 0.5s;
+      opacity: 0 & .car-img {
+        & img {
+          transform: rotate(0);
+          transition: 0.5s;
+          transition-delay: 0.3s;
+        }
+      }
+      .content {
+        & .car-info,
+        h2,
+        .descreption,
+        .information {
+          transform: translateX(200px);
+          transition: 0.7s;
+          transition-delay: 0.5s;
+        }
+
+        & h2 {
+          transition-delay: 0.5s;
+        }
+        & .descreption {
+          transition-delay: 0.7s;
+        }
+        & .information {
+          transition-delay: 0.9s;
+        }
+      }
+    }
+
+    & .active {
+      transform: translateX(0);
+      transition: 0.5s;
+      opacity: 1;
+
+      & .car-img {
+        & img {
+          transform: rotate(-20deg);
+        }
+      }
+
+      .content {
+        & .car-info,
+        h2,
+        .descreption,
+        .information {
+          transform: translateX(0);
+        }
       }
     }
   }
